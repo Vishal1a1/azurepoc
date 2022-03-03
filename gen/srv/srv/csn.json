@@ -1,8 +1,9 @@
 {
   "definitions": {
     "MSGraphService": {
-      "@source": "srv/msgraph-user-service.cds",
+      "@source": "srv/azurepoc-service.cds",
       "kind": "service",
+      "@impl": "./azurepoc-service.js",
       "@cds.query.limit": 100,
       "@requires": "any"
     },
@@ -33,7 +34,7 @@
     }
   },
   "meta": {
-    "creator": "CDS Compiler v2.11.4",
+    "creator": "CDS Compiler v2.12.0",
     "flavor": "inferred"
   },
   "$version": "2.0"

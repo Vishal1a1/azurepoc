@@ -1,0 +1,41 @@
+_schema-version: '3.1'
+ID: azurepoc
+version: 1.0.0
+description: "A simple CAP project."
+parameters:
+  enable-parallel-deployments: true
+
+modules:
+ # --------------------- SERVER MODULE ------------------------
+ - name: azurepoc
+ # ------------------------------------------------------------
+   type: nodejs
+   path: gen/srv
+   parameters:
+     buildpack: nodejs_buildpack
+   build-parameters:
+     builder: npm-ci
+   provides:
+    - name: srv-api      # required by consumers of CAP services (e.g. approuter)
+      properties:
+        srv-url: ${default-url}
+
+resources:
+ - name: azurepoc_destination
+   type: org.cloudfoundry.existing-service
+   parameters:
+     service-name: demo_destination
+
+ - name: azurepoc_uaa
+   type: org.cloudfoundry.managed-service
+   parameters:
+     path: ./xs-security.json
+     service: xsuaa
+     service-plan: application
+
+build-parameters:
+  before-all:
+   - builder: custom
+     commands:
+      - npm ci
+      - npx -p @sap/cds-dk cds build --production
