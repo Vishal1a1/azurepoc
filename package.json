@@ -4,9 +4,7 @@
     "description": "A simple CAP project.",
     "repository": "<Add your repository here>",
     "license": "UNLICENSED",
-    "engines": {
-        "node": "^14"
-    },
+    "engines": { "node": "v16.14.0", "npm": "8.5.2" },
     "private": true,
     "dependencies": {
         "@sap/cds": "^5.7.5",
