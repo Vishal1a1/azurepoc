@@ -1,0 +1,40 @@
+{
+  "definitions": {
+    "MSGraphService": {
+      "@source": "srv/msgraph-user-service.cds",
+      "kind": "service",
+      "@cds.query.limit": 100,
+      "@requires": "any"
+    },
+    "MSGraphService.User": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "aad_id": {
+          "key": true,
+          "type": "cds.String"
+        },
+        "username": {
+          "type": "cds.String"
+        },
+        "displayName": {
+          "type": "cds.String"
+        },
+        "givenName": {
+          "type": "cds.String"
+        },
+        "surname": {
+          "type": "cds.String"
+        },
+        "isAzureActiveDirectory": {
+          "type": "cds.Boolean"
+        }
+      }
+    }
+  },
+  "meta": {
+    "creator": "CDS Compiler v2.11.4",
+    "flavor": "inferred"
+  },
+  "$version": "2.0"
+}

@@ -1,0 +1,8 @@
+---
+applications:
+  - name: azurepoc
+    path: .
+    memory: 256M
+    buildpacks:
+      - nodejs_buildpack
+    services:

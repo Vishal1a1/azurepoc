@@ -1,0 +1,71 @@
+{
+	"VCAP_SERVICES": {
+		"xsuaa": [
+			{
+				"label": "xsuaa",
+				"provider": null,
+				"plan": "application",
+				"name": "azurepoc_uaa",
+				"tags": [
+					"xsuaa"
+				],
+				"instance_guid": "3d8c5384-730b-49d3-ae65-a50f3c7c3284",
+				"instance_name": "azurepoc_uaa",
+				"binding_guid": "0c4aac7f-be1a-4529-a8b1-05b528ffffaf",
+				"binding_name": null,
+				"credentials": {
+					"tenantmode": "dedicated",
+					"sburl": "https://internal-xsuaa.authentication.ap21.hana.ondemand.com",
+					"subaccountid": "21676299-df08-49be-8f9e-1792b529cebc",
+					"credential-type": "instance-secret",
+					"clientid": "sb-azurepoc!t5319",
+					"xsappname": "azurepoc!t5319",
+					"clientsecret": "2QqOGDQOJLI+4Mo4izaglNf+DzU=",
+					"url": "https://a650a813trial.authentication.ap21.hana.ondemand.com",
+					"uaadomain": "authentication.ap21.hana.ondemand.com",
+					"verificationkey": "-----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnq6SbWFVynNZjzuR9EgX9NqeLorQEmusu/ndDGPScJNVAe9SxdwcyhS6pXGxo30XlUaiLCyXYNbya6dcI+ZQ73H9Q/dAnWWpD+7cxSxFpEP1eC7f9JFp48hqP9o6rKBhG9QpW3EXkB/aNjWJJ0FpdbZn3LPEoGx6nD4Nl5DdN57sIaRjrhnGTBVlWbyfxUw3qgN888LW8/9WoRp4RhZyVGkNpISfNthJu3FMMs385DPECInIRC3muHmazVXOpubpN7jHBeouNX7teDJL7FX+98B89KYxPi5WmQWYZS2JF2h0V1QNn5i0yulN6bjUwpBjnHUxww93Z+FHle7WPMd4DQIDAQAB-----END PUBLIC KEY-----",
+					"apiurl": "https://api.authentication.ap21.hana.ondemand.com",
+					"identityzone": "a650a813trial",
+					"identityzoneid": "21676299-df08-49be-8f9e-1792b529cebc",
+					"tenantid": "21676299-df08-49be-8f9e-1792b529cebc",
+					"zoneid": "21676299-df08-49be-8f9e-1792b529cebc"
+				},
+				"syslog_drain_url": null,
+				"volume_mounts": []
+			}
+		],
+		"destination": [
+			{
+				"label": "destination",
+				"provider": null,
+				"plan": "lite",
+				"name": "azurepoc_destination",
+				"tags": [
+					"destination",
+					"conn",
+					"connsvc"
+				],
+				"instance_guid": "f412be76-f966-4fe4-bf43-322201df4350",
+				"instance_name": "azurepoc_destination",
+				"binding_guid": "ff2b7507-748a-4464-abf2-0d5305c84afb",
+				"binding_name": null,
+				"credentials": {
+					"tenantmode": "dedicated",
+					"clientid": "sb-clonef412be76f9664fe4bf43322201df4350!b5319|destination-xsappname!b5",
+					"credential-type": "binding-secret",
+					"xsappname": "clonef412be76f9664fe4bf43322201df4350!b5319|destination-xsappname!b5",
+					"clientsecret": "ff2b7507-748a-4464-abf2-0d5305c84afb$O3qnULjcuQseJy395pqx7u9bkNH8hlheBx2Xf00GWYY=",
+					"uri": "https://destination-configuration.cfapps.ap21.hana.ondemand.com",
+					"url": "https://a650a813trial.authentication.ap21.hana.ondemand.com",
+					"uaadomain": "authentication.ap21.hana.ondemand.com",
+					"instanceid": "f412be76-f966-4fe4-bf43-322201df4350",
+					"verificationkey": "-----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnq6SbWFVynNZjzuR9EgX9NqeLorQEmusu/ndDGPScJNVAe9SxdwcyhS6pXGxo30XlUaiLCyXYNbya6dcI+ZQ73H9Q/dAnWWpD+7cxSxFpEP1eC7f9JFp48hqP9o6rKBhG9QpW3EXkB/aNjWJJ0FpdbZn3LPEoGx6nD4Nl5DdN57sIaRjrhnGTBVlWbyfxUw3qgN888LW8/9WoRp4RhZyVGkNpISfNthJu3FMMs385DPECInIRC3muHmazVXOpubpN7jHBeouNX7teDJL7FX+98B89KYxPi5WmQWYZS2JF2h0V1QNn5i0yulN6bjUwpBjnHUxww93Z+FHle7WPMd4DQIDAQAB-----END PUBLIC KEY-----",
+					"identityzone": "a650a813trial",
+					"tenantid": "21676299-df08-49be-8f9e-1792b529cebc"
+				},
+				"syslog_drain_url": null,
+				"volume_mounts": []
+			}
+		]
+	}
+}
